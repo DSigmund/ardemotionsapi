@@ -23,7 +23,7 @@ for (let index = 0; index < tagsItems.length; index++) {
 }
 
 const jsonfile = require('jsonfile')
-
+const moment = require('moment')
 
 const express = require('express')
 const app = express()
@@ -91,7 +91,8 @@ app.put('/item/:id/emotion', function (req, res) {
   emotions.push({
     id: req.params.id,
     emotion: req.body.emotion,
-    time: req.body.time
+    time: req.body.time,
+    added: moment().format('YYYY-MM-DDTHH:mm:ss')
   })
   jsonfile.writeFile('./emotions.json', emotions, function(error) {
     if (error) {
@@ -103,7 +104,6 @@ app.put('/item/:id/emotion', function (req, res) {
   })
 })
 
-// TODO: put item/:id/tag {tags (List), time}
 app.put('/item/:id/tag', function (req, res) {
   for (let index = 0; index < req.body.tags.length; index++) {
     const tag = req.body.tags[index]
@@ -123,14 +123,10 @@ app.put('/item/:id/tag', function (req, res) {
     tagsItems.push({
       tagID: myID,
       itemID: req.params.id,
-      time: req.body.time
+      time: req.body.time,
+      added: moment().format('YYYY-MM-DDTHH:mm:ss')
     })
   }
-  emotions.push({
-    id: req.params.id,
-    emotion: req.body.emotion,
-    time: req.body.time
-  })
   jsonfile.writeFile('./tags.json', tags, function (error) {
     if (error) {
       console.error(error)
