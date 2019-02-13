@@ -11,9 +11,12 @@ Add the Tables:
 + Tags_x_Items (m:n for tags and items)
 
 Draw.io-XML
-[ARD Core Emotion API.xml](:/034f08045e99499cb0fd0c902aa62f23)
+[ARD Core Emotion API.xml]
 
-![ARD Core Emotion API.png](:/3c437f17f1ee4bb09b29be3323ac5f9b)
+![ARD Core Emotion API.png]
+
+Postman-Collection
+[ARDCore Emotion API.postman_collection.json]
 
 ## PUT
 
