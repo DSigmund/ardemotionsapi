@@ -65,13 +65,15 @@ Get an Item, Response includes now emotions and tags
     "emotions": [
         {
             "emotion":"string",
-            "time":"00:00:00"
+            "time":"00:00:00",
+            "added":"2019-02-13T14:00:00"
         }
     ],
     "tags": [
         {
             "tag":"string",
-            "time":"00:00:00"
+            "time":"00:00:00",
+            "added":"2019-02-13T14:00:00"
         }
     ]
 }
@@ -87,7 +89,8 @@ Get a List of Items by the emotion used
 [
     {
         "id":"xxx",
-        "time":"00:00:00"
+        "time":"00:00:00",
+        "added":"2019-02-13T14:00:00"
     }
 ]
 ```
@@ -102,7 +105,8 @@ Get a List of Items by the Tag used
 [
     {
         "id":"xxx",
-        "time":"00:00:00"
+        "time":"00:00:00",
+        "added":"2019-02-13T14:00:00"
     }
 ]
 ```
