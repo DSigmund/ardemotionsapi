@@ -1,14 +1,1 @@
-[
-  {
-    "id":"1",
-    "tag":"hilfreich"
-  },
-  {
-    "id":"2",
-    "tag":"informativ"
-  },
-  {
-    "id":"3",
-    "tag":"romantisch"
-  }
-]
+[{"id":"1","tag":"hilfreich"},{"id":"2","tag":"informativ"},{"id":"3","tag":"romantisch"},{"id":3,"tag":"informativ"}]

@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "6482d7a1-eb6e-4303-91f9-ff432403949c",
+		"name": "ARDCore Emotion API",
+		"description": "Simple Emotion and Tag Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "gets a list of possible GET EndPoints"
+			},
+			"response": []
+		},
+		{
+			"name": "GET items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				},
+				"description": "Return all Items"
+			},
+			"response": []
+		},
+		{
+			"name": "GET emotions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/emotions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"emotions"
+					]
+				},
+				"description": "returns all emotions"
+			},
+			"response": []
+		},
+		{
+			"name": "GET tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tags"
+					]
+				},
+				"description": "Returns all Tags"
+			},
+			"response": []
+		},
+		{
+			"name": "GET specific ITEM",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/items/:item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						":item"
+					],
+					"variable": [
+						{
+							"key": "item",
+							"value": "urn:ard:episodes:b3705a5b-487f-4d5c-aecd-db31fc8602f4",
+							"description": "An Item ID"
+						}
+					]
+				},
+				"description": "Get a specific Item by its ID"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Items by emotion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/emotions/:emotion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"emotions",
+						":emotion"
+					],
+					"variable": [
+						{
+							"key": "emotion",
+							"value": "sad",
+							"description": "An Emotion"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Items by tag",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/tags/:tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tags",
+						":tag"
+					],
+					"variable": [
+						{
+							"key": "tag",
+							"value": "informativ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT add an emotion  to a Video",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"emotion\": \"sad\",\n\"time\": \"00:01:23\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/item/:id/emotion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item",
+						":id",
+						"emotion"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "urn:ard:episodes:b3705a5b-487f-4d5c-aecd-db31fc8602f4",
+							"description": "ID of an Video"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT add a tag  to a Video",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"tags\": [\"informativ\"],\n\"time\": \"00:02:45\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/item/:id/tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"item",
+						":id",
+						"tag"
+					],
+					"variable": [
+						{
+							"description": "ID of an Video",
+							"key": "id",
+							"value": "urn:ard:episodes:b3705a5b-487f-4d5c-aecd-db31fc8602f4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
