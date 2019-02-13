@@ -1,4 +1,4 @@
-# Emotion API
+# Emotag API
 
 Extension of the Code-Data-Model:
 
